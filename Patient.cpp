@@ -14,7 +14,6 @@ Patient::Patient(const string& name, int ID,
                  const string& mobile)
 : Person(name, ID, gender, email, mobile)
 {
-    // If you want to default other fields, do so
 }
 
 // Overridden methods
@@ -212,7 +211,6 @@ void Patient::selectDoctor(StaffManager* staffMgr)
         // We get the entire doctor list from StaffManager:
         vector<Doctor*> allDoctors = staffMgr->getDoctors();
 
-        // We'll gather only those matching `dept`
         vector<Doctor*> departmentDoctors;
         for (auto* d : allDoctors) {
             if (d->getDepartment() == dept) {
